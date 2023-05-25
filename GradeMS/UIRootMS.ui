@@ -1,0 +1,1155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>UIRootMS</class>
+ <widget class="QMainWindow" name="UIRootMS">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>580</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>580</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>800</width>
+    <height>580</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/*设置背景颜色*/
+#centralwidget{background-color: rgb(251, 255, 255);}
+#page_personInfo{background-color: rgb(251, 255, 255);}
+#page_StuInfo{background-color: rgb(251, 255, 255);}
+#page_StuGrade{background-color: rgb(251, 255, 255);}
+#page_UserAccount{background-color: rgb(251, 255, 255);}
+#page_CourseInfo{background-color: rgb(251, 255, 255);}
+
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="TopWidget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>0</y>
+      <width>661</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <widget class="QLabel" name="SystemTime">
+     <property name="geometry">
+      <rect>
+       <x>480</x>
+       <y>0</y>
+       <width>181</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-size: 12px;</string>
+     </property>
+     <property name="text">
+      <string>系统时间：</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="WelcomSays">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>261</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>WD粗钢笔行楷-凤殿优化版</family>
+       <pointsize>-1</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-size: 16px;</string>
+     </property>
+     <property name="text">
+      <string>欢迎您，系统管理员！</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="LeftWidget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>111</width>
+      <height>571</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(0, 96, 115);</string>
+    </property>
+    <widget class="QPushButton" name="btnManagePersonInfo">
+     <property name="geometry">
+      <rect>
+       <x>12</x>
+       <y>135</y>
+       <width>90</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	margin-right:3px;
+	margin-bottom:0px;
+	color: rgb(255, 255, 255);
+	background-color: #00d0ef;
+	border:1px outset rgb(255, 255, 255, 80%);
+	border-radius:6px;
+	font-family: &quot;Microsoft YaHei&quot;;
+	font-size: 12px;
+	font-weight: bold;
+	font: 12px &quot;Microsoft YaHei&quot;;
+} 
+
+/*鼠标放在按钮上方*/
+QPushButton:hover {
+	background-color: rgba(165, 205, 255,80%);
+	border:2px outset rgba(36, 36, 36,0);
+} 
+
+/*鼠标点击按钮*/
+QPushButton:pressed {
+	background-color: rgba(165, 205, 255,90%);
+	border:4px outset rgba(36, 36, 36,0);
+}</string>
+     </property>
+     <property name="text">
+      <string>查看本人信息</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnManageStuGrade">
+     <property name="geometry">
+      <rect>
+       <x>12</x>
+       <y>235</y>
+       <width>90</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	margin-right:3px;
+	margin-bottom:0px;
+	color: rgb(255, 255, 255);
+	background-color: #00d0ef;
+	border:1px outset rgb(255, 255, 255, 80%);
+	border-radius:6px;
+	font-family: &quot;Microsoft YaHei&quot;;
+	font-size: 12px;
+	font-weight: bold;
+	font: 12px &quot;Microsoft YaHei&quot;;
+} 
+
+/*鼠标放在按钮上方*/
+QPushButton:hover {
+	background-color: rgba(165, 205, 255,80%);
+	border:2px outset rgba(36, 36, 36,0);
+} 
+
+/*鼠标点击按钮*/
+QPushButton:pressed {
+	background-color: rgba(165, 205, 255,90%);
+	border:4px outset rgba(36, 36, 36,0);
+}</string>
+     </property>
+     <property name="text">
+      <string>学生成绩管理</string>
+     </property>
+    </widget>
+    <widget class="Line" name="line">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>430</y>
+       <width>118</width>
+       <height>3</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnExit">
+     <property name="geometry">
+      <rect>
+       <x>18</x>
+       <y>485</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(226, 226, 226);
+font-size: 12px</string>
+     </property>
+     <property name="text">
+      <string>退出系统</string>
+     </property>
+    </widget>
+    <widget class="Line" name="line_2">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>115</y>
+       <width>118</width>
+       <height>3</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="SWU">
+     <property name="geometry">
+      <rect>
+       <x>8</x>
+       <y>8</y>
+       <width>96</width>
+       <height>96</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>SWU</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnManageAccount">
+     <property name="geometry">
+      <rect>
+       <x>12</x>
+       <y>335</y>
+       <width>90</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	margin-right:3px;
+	margin-bottom:0px;
+	color: rgb(255, 255, 255);
+	background-color: #00d0ef;
+	border:1px outset rgb(255, 255, 255, 80%);
+	border-radius:6px;
+	font-family: &quot;Microsoft YaHei&quot;;
+	font-size: 12px;
+	font-weight: bold;
+	font: 12px &quot;Microsoft YaHei&quot;;
+} 
+
+/*鼠标放在按钮上方*/
+QPushButton:hover {
+	background-color: rgba(165, 205, 255,80%);
+	border:2px outset rgba(36, 36, 36,0);
+} 
+
+/*鼠标点击按钮*/
+QPushButton:pressed {
+	background-color: rgba(165, 205, 255,90%);
+	border:4px outset rgba(36, 36, 36,0);
+}</string>
+     </property>
+     <property name="text">
+      <string>用户账户管理</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnManageStuInfo">
+     <property name="geometry">
+      <rect>
+       <x>12</x>
+       <y>185</y>
+       <width>90</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	margin-right:3px;
+	margin-bottom:0px;
+	color: rgb(255, 255, 255);
+	background-color: #00d0ef;
+	border:1px outset rgb(255, 255, 255, 80%);
+	border-radius:6px;
+	font-family: &quot;Microsoft YaHei&quot;;
+	font-size: 12px;
+	font-weight: bold;
+	font: 12px &quot;Microsoft YaHei&quot;;
+} 
+
+/*鼠标放在按钮上方*/
+QPushButton:hover {
+	background-color: rgba(165, 205, 255,80%);
+	border:2px outset rgba(36, 36, 36,0);
+} 
+
+/*鼠标点击按钮*/
+QPushButton:pressed {
+	background-color: rgba(165, 205, 255,90%);
+	border:4px outset rgba(36, 36, 36,0);
+}</string>
+     </property>
+     <property name="text">
+      <string>学生信息管理</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnManageCourseInfo">
+     <property name="geometry">
+      <rect>
+       <x>12</x>
+       <y>285</y>
+       <width>90</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	margin-right:3px;
+	margin-bottom:0px;
+	color: rgb(255, 255, 255);
+	background-color: #00d0ef;
+	border:1px outset rgb(255, 255, 255, 80%);
+	border-radius:6px;
+	font-family: &quot;Microsoft YaHei&quot;;
+	font-size: 12px;
+	font-weight: bold;
+	font: 12px &quot;Microsoft YaHei&quot;;
+} 
+
+/*鼠标放在按钮上方*/
+QPushButton:hover {
+	background-color: rgba(165, 205, 255,80%);
+	border:2px outset rgba(36, 36, 36,0);
+} 
+
+/*鼠标点击按钮*/
+QPushButton:pressed {
+	background-color: rgba(165, 205, 255,90%);
+	border:4px outset rgba(36, 36, 36,0);
+}</string>
+     </property>
+     <property name="text">
+      <string>课程信息管理</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>70</y>
+      <width>641</width>
+      <height>471</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="page_personInfo">
+     <widget class="QLabel" name="psifName">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>120</y>
+        <width>390</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 27px &quot;华文隶书&quot;;</string>
+      </property>
+      <property name="text">
+       <string>宋志远</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="psifID">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>221</y>
+        <width>390</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 27px &quot;华文隶书&quot;;</string>
+      </property>
+      <property name="text">
+       <string>202100001</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="psifCollege">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>271</y>
+        <width>390</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 27px &quot;华文隶书&quot;;</string>
+      </property>
+      <property name="text">
+       <string>计算机与信息科学学院 软件学院</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="psifGender">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>171</y>
+        <width>390</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 27px &quot;华文隶书&quot;;</string>
+      </property>
+      <property name="text">
+       <string>男</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>120</y>
+        <width>61</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 19px &quot;黑体&quot;;</string>
+      </property>
+      <property name="text">
+       <string>姓名：</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>170</y>
+        <width>61</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 19px &quot;黑体&quot;;</string>
+      </property>
+      <property name="text">
+       <string>性别：</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>220</y>
+        <width>61</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 19px &quot;黑体&quot;;</string>
+      </property>
+      <property name="text">
+       <string>工号：</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>270</y>
+        <width>61</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 19px &quot;黑体&quot;;</string>
+      </property>
+      <property name="text">
+       <string>单位：</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="grid">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>80</y>
+        <width>531</width>
+        <height>261</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border:2px dashed #242424;
+border-color: #475594;
+border-radius: 20px</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <zorder>grid</zorder>
+     <zorder>psifName</zorder>
+     <zorder>psifID</zorder>
+     <zorder>psifCollege</zorder>
+     <zorder>psifGender</zorder>
+     <zorder>label</zorder>
+     <zorder>label_2</zorder>
+     <zorder>label_3</zorder>
+     <zorder>label_4</zorder>
+    </widget>
+    <widget class="QWidget" name="page_StuInfo">
+     <widget class="QTableView" name="StuInfoView">
+      <property name="geometry">
+       <rect>
+        <x>15</x>
+        <y>41</y>
+        <width>611</width>
+        <height>391</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTableView{  
+    color: black;  	/*字体颜色*/
+    border: 1px solid rgb(148, 107, 86);          /*边框颜色*/  
+    gridline-color:rgb(255, 233, 217);     	/*grid线颜色*/  
+    background-color: #fcfcfc;  	/*无数据行颜色*/
+    alternate-background-color:rgba(231, 255, 233, 100); /*行交替颜色*/
+    selection-color: black;   
+    selection-background-color: rgb(255, 253, 225); /*选中行背景颜色*/ 
+	font-size: 12px; 
+}  
+  
+QTableView::item:!alternate:!selected{  
+    background-color: white;    /*交替行的另一颜色*/
+    selection-background-color: rgb(220, 220, 220);  
+    selection-color: black; 
+}  
+
+</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_prompt_StudentInfo">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>5</y>
+        <width>531</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 19px &quot;华文楷体&quot;;</string>
+      </property>
+      <property name="text">
+       <string>全部学生信息如下：</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnAdd_StudentInfo">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>440</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size: 12px;</string>
+      </property>
+      <property name="text">
+       <string>添加学生</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnReverseChange_StudentInfo">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>440</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size: 12px;</string>
+      </property>
+      <property name="text">
+       <string>撤销操作</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnSaveChange_StudentInfo">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>440</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size: 12px;</string>
+      </property>
+      <property name="text">
+       <string>保存修改</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnRemove_StudentInfo">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>440</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size: 12px;</string>
+      </property>
+      <property name="text">
+       <string>删除学生</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnFilter_StudentInfo">
+      <property name="geometry">
+       <rect>
+        <x>16</x>
+        <y>440</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size: 12px;</string>
+      </property>
+      <property name="text">
+       <string>学生筛选</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnFilterClean_StudentInfo">
+      <property name="geometry">
+       <rect>
+        <x>106</x>
+        <y>440</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size: 12px;</string>
+      </property>
+      <property name="text">
+       <string>显示全部</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_13">
+      <property name="geometry">
+       <rect>
+        <x>490</x>
+        <y>20</y>
+        <width>151</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size: 12px;</string>
+      </property>
+      <property name="text">
+       <string>（提示：双击可修改内容）</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_StuGrade">
+     <widget class="QTableView" name="GradeView">
+      <property name="geometry">
+       <rect>
+        <x>15</x>
+        <y>41</y>
+        <width>611</width>
+        <height>391</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTableView{  
+    color: black;  	/*字体颜色*/
+    border: 1px solid rgb(148, 107, 86);          /*边框颜色*/  
+    gridline-color:rgb(255, 233, 217);     	/*grid线颜色*/  
+    background-color: #fcfcfc;  	/*无数据行颜色*/
+    alternate-background-color:rgba(231, 255, 233, 100); /*行交替颜色*/
+    selection-color: black;   
+    selection-background-color: rgb(255, 253, 225); /*选中行背景颜色*/
+	font-size: 12px;  
+}  
+  
+QTableView::item:!alternate:!selected{  
+    background-color: white;    /*交替行的另一颜色*/
+    selection-background-color: rgb(220, 220, 220);  
+    selection-color: black; 
+}  
+
+</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnAdd_StudentGrade">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>440</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">	font-size: 12px;  </string>
+      </property>
+      <property name="text">
+       <string>添加学生</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnRemove_StudentGrade">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>440</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">	font-size: 12px;  </string>
+      </property>
+      <property name="text">
+       <string>删除学生</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnSaveChange_StudentGrade">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>440</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">	font-size: 12px;  </string>
+      </property>
+      <property name="text">
+       <string>保存修改</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="boxCourseName">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>5</y>
+        <width>171</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size: 12px;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>5</y>
+        <width>251</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 19px &quot;华文楷体&quot;;</string>
+      </property>
+      <property name="text">
+       <string>请选择您要查看成绩的课程：</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnReverseChange_StudentGrade">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>440</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">	font-size: 12px;  </string>
+      </property>
+      <property name="text">
+       <string>撤销操作</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_10">
+      <property name="geometry">
+       <rect>
+        <x>490</x>
+        <y>20</y>
+        <width>151</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size: 12px;</string>
+      </property>
+      <property name="text">
+       <string>（提示：双击可修改内容）</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_CourseInfo">
+     <widget class="QTableView" name="CourseInfoView">
+      <property name="geometry">
+       <rect>
+        <x>15</x>
+        <y>41</y>
+        <width>611</width>
+        <height>391</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTableView{  
+    color: black;  	/*字体颜色*/
+    border: 1px solid rgb(148, 107, 86);          /*边框颜色*/  
+    gridline-color:rgb(255, 233, 217);     	/*grid线颜色*/  
+    background-color: #fcfcfc;  	/*无数据行颜色*/
+    alternate-background-color:rgba(231, 255, 233, 100); /*行交替颜色*/
+    selection-color: black;   
+    selection-background-color: rgb(255, 253, 225); /*选中行背景颜色*/  
+	font-size: 12px;  
+}  
+  
+QTableView::item:!alternate:!selected{  
+    background-color: white;    /*交替行的另一颜色*/
+    selection-background-color: rgb(220, 220, 220);  
+    selection-color: black; 
+}  
+
+</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_CourseInfo">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>5</y>
+        <width>431</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 19px &quot;华文楷体&quot;;</string>
+      </property>
+      <property name="text">
+       <string>共查询到 门开设课程，详细信息如下：</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnAdd_CourseInfo">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>440</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">	font-size: 12px;  </string>
+      </property>
+      <property name="text">
+       <string>添加课程</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnReverseChange_CourseInfo">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>440</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">	font-size: 12px;  </string>
+      </property>
+      <property name="text">
+       <string>撤销操作</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnSaveChange_CourseInfo">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>440</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">	font-size: 12px;  </string>
+      </property>
+      <property name="text">
+       <string>保存修改</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnRemove_CourseInfo">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>440</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">	font-size: 12px;  </string>
+      </property>
+      <property name="text">
+       <string>删除课程</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_11">
+      <property name="geometry">
+       <rect>
+        <x>490</x>
+        <y>20</y>
+        <width>151</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">	font-size: 12px;  </string>
+      </property>
+      <property name="text">
+       <string>（提示：双击可修改内容）</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_UserAccount">
+     <widget class="QTableView" name="AccountView">
+      <property name="geometry">
+       <rect>
+        <x>15</x>
+        <y>41</y>
+        <width>611</width>
+        <height>391</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTableView{  
+    color: black;  	/*字体颜色*/
+    border: 1px solid rgb(148, 107, 86);          /*边框颜色*/  
+    gridline-color:rgb(255, 233, 217);     	/*grid线颜色*/  
+    background-color: #fcfcfc;  	/*无数据行颜色*/
+    alternate-background-color:rgba(231, 255, 233, 100); /*行交替颜色*/
+    selection-color: black;   
+    selection-background-color: rgb(255, 253, 225); /*选中行背景颜色*/  
+}  
+  
+QTableView::item:!alternate:!selected{  
+    background-color: white;    /*交替行的另一颜色*/
+    selection-background-color: rgb(220, 220, 220);  
+    selection-color: black; 
+}  
+
+</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_prompt_Account">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>5</y>
+        <width>531</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 19px &quot;华文楷体&quot;;</string>
+      </property>
+      <property name="text">
+       <string>系统中全部可登陆账户如下：</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnAdd_UserAccount">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>440</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">	font-size: 12px;  </string>
+      </property>
+      <property name="text">
+       <string>添加账户</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnSaveChange_UserAccount">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>440</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">	font-size: 12px;  </string>
+      </property>
+      <property name="text">
+       <string>保存修改</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnReverseChange_UserAccount">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>440</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">	font-size: 12px;  </string>
+      </property>
+      <property name="text">
+       <string>撤销操作</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnRemove_UserAccount">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>440</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">	font-size: 12px;  </string>
+      </property>
+      <property name="text">
+       <string>删除账户</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnFind_UserAccount">
+      <property name="geometry">
+       <rect>
+        <x>16</x>
+        <y>440</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">	font-size: 12px;  </string>
+      </property>
+      <property name="text">
+       <string>查找用户</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_12">
+      <property name="geometry">
+       <rect>
+        <x>490</x>
+        <y>20</y>
+        <width>151</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">	font-size: 12px;  </string>
+      </property>
+      <property name="text">
+       <string>（提示：双击可修改内容）</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnFindClean_UserAccount">
+      <property name="geometry">
+       <rect>
+        <x>106</x>
+        <y>440</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">	font-size: 12px;  </string>
+      </property>
+      <property name="text">
+       <string>显示全部</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>btnExit</sender>
+   <signal>clicked()</signal>
+   <receiver>UIRootMS</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>55</x>
+     <y>518</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

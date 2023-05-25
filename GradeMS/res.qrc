@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/loginImg">
+        <file>res/blue.png</file>
+        <file>res/girl.png</file>
+        <file>res/swumotto.png</file>
+    </qresource>
+    <qresource prefix="/main">
+        <file>res/icon.png</file>
+        <file>res/icon.ico</file>
+        <file>res/whiteSWU.png</file>
+    </qresource>
+</RCC>

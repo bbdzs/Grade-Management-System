@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>UILogin</class>
+ <widget class="QMainWindow" name="UILogin">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>580</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>580</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>800</width>
+    <height>580</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>login</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(255, 255, 255);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="loginImage">
+    <property name="geometry">
+     <rect>
+      <x>-1</x>
+      <y>-1</y>
+      <width>371</width>
+      <height>601</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>IMAGE</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>-10</y>
+      <width>421</width>
+      <height>611</height>
+     </rect>
+    </property>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>10</y>
+       <width>131</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-size: 12px</string>
+     </property>
+     <property name="text">
+      <string>西南大学 成绩管理系统</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="TextLogin">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>110</y>
+       <width>91</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 87 27px &quot;Arial Black&quot;;</string>
+     </property>
+     <property name="text">
+      <string>Login</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="widget_3" native="true">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>340</y>
+       <width>241</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QPushButton" name="buttonLogin">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>80</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>微软雅黑</family>
+          <pointsize>-1</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">/*正常情况下样式*/
+QPushButton{
+	font: 13px &quot;微软雅黑&quot;;
+	color: #2f3640;
+	background-color:#f8ffff;
+	border-color: #4abefc;
+	border-radius: 15px;
+	border-style: solid;
+	border-width: 2px;
+	padding: 5px;
+}
+
+/*鼠标停留在按钮上的样式*/
+QPushButton:hover{
+	font: 13px &quot;微软雅黑&quot;;
+	color: #FFFFFF;
+	background-color: #4abefc;
+	border-color: #4abefc;
+}
+</string>
+        </property>
+        <property name="text">
+         <string>登录</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="buttonChangepswd">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>80</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">/*正常情况下样式*/
+QPushButton{
+	font: 13px &quot;微软雅黑&quot;;
+	color: #2f3640;
+	background-color:#f8ffff;
+	border-color: #4abefc;
+	border-radius: 15px;
+	border-style: solid;
+	border-width: 2px;
+	padding: 5px;
+}
+
+/*鼠标停留在按钮上的样式*/
+QPushButton:hover{
+	font: 13px &quot;微软雅黑&quot;;
+	color: #FFFFFF;
+	background-color: #4abefc;
+	border-color: #4abefc;
+}
+</string>
+        </property>
+        <property name="text">
+         <string>修改密码</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QLineEdit" name="textLoginID">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>200</y>
+       <width>261</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>宋体</family>
+       <pointsize>-1</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: #fdfdfd;
+border:1px groove gray;
+border-radius:7px;
+padding:2px 4px;
+font-size: 15px</string>
+     </property>
+     <property name="maxLength">
+      <number>9</number>
+     </property>
+     <property name="placeholderText">
+      <string>请输入您的用户名（学号/工号）</string>
+     </property>
+     <property name="clearButtonEnabled">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="textLoginPasswd">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>270</y>
+       <width>261</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Candara</family>
+       <pointsize>-1</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: #fdfdfd;
+border:1px groove gray;
+border-radius:7px;
+padding:2px 4px;
+font-size: 15px</string>
+     </property>
+     <property name="maxLength">
+      <number>18</number>
+     </property>
+     <property name="echoMode">
+      <enum>QLineEdit::Password</enum>
+     </property>
+     <property name="placeholderText">
+      <string>请输入您的密码</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="copyright">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>510</y>
+       <width>181</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Consolas</family>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-size: 15px</string>
+     </property>
+     <property name="text">
+      <string>© 2022 by Cai Qianzhe</string>
+     </property>
+    </widget>
+    <zorder>TextLogin</zorder>
+    <zorder>widget_3</zorder>
+    <zorder>textLoginID</zorder>
+    <zorder>textLoginPasswd</zorder>
+    <zorder>copyright</zorder>
+    <zorder>label</zorder>
+   </widget>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>textLoginID</tabstop>
+  <tabstop>textLoginPasswd</tabstop>
+  <tabstop>buttonLogin</tabstop>
+  <tabstop>buttonChangepswd</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
