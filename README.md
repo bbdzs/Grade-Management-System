@@ -43,3 +43,27 @@
 IDE: Qt 5.15.2
 
 Kit: Desktop Qt 5.15.2 MinGW 32-bit
+
+--- 
+## 部分截图
+
+登录界面:
+![](https://github.com/bbdzs/Grade-Management-System/raw/main/Run_screenshot/1Login.png)
+
+修改密码界面:
+![](https://github.com/bbdzs/Grade-Management-System/raw/main/Run_screenshot/2ChangePswd.png)
+
+管理员断-课程信息管理界面:
+![](https://github.com/bbdzs/Grade-Management-System/raw/main/Run_screenshot/root-CourseInfoManagement.png)
+
+学生端-个人成绩查看界面:
+![](https://github.com/bbdzs/Grade-Management-System/raw/main/Run_screenshot/stu-MyGrade.png)
+
+学生端-个人信息查看界面:
+![](https://github.com/bbdzs/Grade-Management-System/raw/main/Run_screenshot/stu-MyInfo.png)
+
+教师端-班级成绩管理界面:
+![](https://github.com/bbdzs/Grade-Management-System/raw/main/Run_screenshot/tea-ClassGrade.png)
+
+
+
