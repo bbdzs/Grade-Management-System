@@ -53,7 +53,7 @@ Kit: Desktop Qt 5.15.2 MinGW 32-bit
 修改密码界面:
 ![](https://github.com/bbdzs/Grade-Management-System/raw/main/Run_screenshot/2ChangePswd.png)
 
-管理员断-课程信息管理界面:
+管理员端-课程信息管理界面:
 ![](https://github.com/bbdzs/Grade-Management-System/raw/main/Run_screenshot/root-CourseInfoManagement.png)
 
 学生端-个人成绩查看界面:
